@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 
-// replace your database connection string here
-mongoose.connect(process.env.DATABASE_URL);
+// << replace your database connection string here
+mongoose.connect('mongodb://127.0.0.1/recipes', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+});
 
 const db = mongoose.connection;
 
