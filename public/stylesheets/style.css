@@ -18,3 +18,15 @@
 .collection-item form {
   margin-top: -5px;
 }
+
+.tiny-icon{
+  height: 10px;
+  width: 10px;
+  /* this controls the spoon and fork icon */
+}
+
+#google-photo{
+  height: 30px;
+  width: 30px;
+  /* this controls the google icon */
+}

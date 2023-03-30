@@ -1,0 +1,65 @@
+<%- include('../partials/header') %>
+
+<section id="show-page">
+    <div>Title: </div>
+    <div>
+      <%= recipe.title %>
+    </div>
+    <div>Style: </div>
+    <div>
+      <%= recipe.style %>
+    </div>
+    <div>Creator: </div>
+    <div>
+      <!-- %= user.userName %> -->
+    </ul>
+</section>
+<br>
+<h2>Ingredients</h2>
+<form id="add-ingredients-form" method="POST" action="/recipes/<%= recipe._id %>/ingredients">
+    <label>Quantity:</label>
+    <input type="number" name="quantity"></input>
+    <label>Measurement:</label>
+    <input type="text" name="measurement"></input>
+    <label>Name:</label>
+    <input type="text" name="name"></input>
+    <input type="submit" value="Add Ingredient">
+</form>
+
+<% if (recipe.ingredients.length) { %>
+    <table>
+        <thead>
+            <tr>
+              <th>Quantity</th>
+              <th>Measurement</th>
+              <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% recipe.ingredients.forEach(function(i) { %>
+                <tr>
+                    <td>
+                        <%= i.quantity %>
+                    </td>
+                    <td>
+                        <%= i.measurement %>
+                    </td>
+                    <td>
+                        <%= i.name %>
+                    </td>
+                    <!-- <td> -->
+                      <!-- % if (user && user._id.equals(r.userId)) { %>
+                        <form action="/reviews/%= r._id %>?_method=DELETE" method="POST">
+                          <button type="submit">X</button>
+                        </form> -->
+                      <!-- % } %> -->
+                    <!-- </td> -->
+                </tr>
+                <% }); %>
+        </tbody>
+    </table> 
+<% } else { %>
+    <h5>No Ingredients Yet</h5>
+<% } %>
+
+<%- include('../partials/footer') %>

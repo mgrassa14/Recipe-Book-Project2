@@ -10,14 +10,19 @@
 </head>
 <body>
   <nav>
-    <img src="">
-    <a href="">ALL MOVIES</a>
+    <img class="tiny-icon" src="https://i.imgur.com/huyiEO0.png">
+    <!-- directs user to show all recipes created from other users (views/recipes/index)-->
+    <a href="/recipes">ALL RECIPES</a>
     <% if (user) { %>
-      <a href="">ADD PERFORMER</a>
-      <a href="">ADD MOVIE</a>
+      <!-- directs users to a page that shows only the logged in user's recipes they created -->
+      <a href="">MY RECIPES</a>
+      <!-- directs users to a page to create a new recipe -->
+      <a href="/recipes/new">ADD RECIPE</a>
+      <!-- directs user to log out -->
       <a href="/logout">LOG OUT</a>
     <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+      <!-- directs users to login -->
+      <a href="/auth/google" class="login">LOG IN&nbsp;<img id="google-photo" src="https://i.imgur.com/FHjYyi0.png"></a>
     <% } %>
   </nav>
   <main>

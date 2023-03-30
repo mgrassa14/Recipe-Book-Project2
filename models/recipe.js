@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-// directions model
+// directions model (embedded)
 const directionsSchema = new mongoose.Schema(
     {
         direction:{type: String, required: true}
@@ -9,7 +9,7 @@ const directionsSchema = new mongoose.Schema(
         timestamps: true,
     }
 );
-// ingredients model
+// ingredients model (embedded)
 const ingredientsSchema = new mongoose.Schema(
     {
         name: {type: String, required: true},
@@ -31,7 +31,7 @@ const recipeSchema = new mongoose.Schema(
         // ONE recipe has MANY directions
         directions: [directionsSchema],
         // ONE user has MANY recipes
-        userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true},
+        userId: {type: mongoose.Schema.Types.ObjectId, ref: 'User' }, //required: true
         userName: String,
         userAvatar: String
     },
