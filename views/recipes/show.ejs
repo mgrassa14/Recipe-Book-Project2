@@ -11,7 +11,7 @@
     </div>
     <div>Creator: </div>
     <div>
-      <!-- %= user.userName %> -->
+      <%= recipe.userName %>
     </ul>
 </section>
 <br>
@@ -47,13 +47,13 @@
                     <td>
                         <%= i.name %>
                     </td>
-                    <!-- <td> -->
-                      <!-- % if (user && user._id.equals(r.userId)) { %>
-                        <form action="/reviews/%= r._id %>?_method=DELETE" method="POST">
+                    <td>
+                      <% if (user && user._id.equals(recipe.userId)) { %>
+                        <form action="/ingredients/<%= i._id %>?_method=DELETE" method="POST">
                           <button type="submit">X</button>
-                        </form> -->
-                      <!-- % } %> -->
-                    <!-- </td> -->
+                        </form>
+                      <% } %>
+                    </td>
                 </tr>
                 <% }); %>
         </tbody>

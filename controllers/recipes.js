@@ -10,6 +10,7 @@ module.exports = {
 function show(req, res){
     RecipeModel.findById(req.params.id)
         .then(function(recipeDoc){
+            console.log(recipeDoc.userId, '<<<<<>> userID')
             console.log(recipeDoc)
             res.render('recipes/show', {recipe: recipeDoc})
         }).catch((err) => {
@@ -21,7 +22,8 @@ function show(req, res){
 function create(req, res){
     console.log(req.body, '<--- contents of the form req.body')
     // res.send('hitting post route, check terminal for contents of form')
-
+    req.body.userId = req.user._id
+    req.body.userName = req.user.name
     RecipeModel.create(req.body)
     .then(function(recipeCreatedInTheDb){
         console.log(recipeCreatedInTheDb, " <- recipe document")
