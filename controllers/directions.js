@@ -2,7 +2,7 @@ const RecipeModel = require('../models/recipe');
 
 module.exports = {
     create,
-    delete: deleteDirection,
+    delete: deleteDirection
 }
 
 function deleteDirection(req, res) {

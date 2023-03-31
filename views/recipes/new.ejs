@@ -1,11 +1,11 @@
 <%- include('../partials/header') %>
 
 <h2>Enter a New Recipe<h2>
-<form action="/recipes" method="POST">
-    <label>Title:</label>
+<form id="new-form" action="/recipes" method="POST">
+    <label>Title:</label><br>
     <input type="text" name="title"><br>
-    <label>Style:</label>
-    <input type="text" name="style"><br>
+    <label>Style:</label><br>
+    <input type="text" name="style">
     <input type="submit" value="Add Recipe">
 </form>
 

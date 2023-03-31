@@ -1,35 +1,66 @@
-# passport-boilerplate
+## Recipe Book
+
+This application allows you to create and save recipes when you login using google. 
+
+You are able to add and delete ingredients and directions incase you decide you would like to change your recipe a bit.
+
+## Screenshots
+
+For this application I wanted to start simple.
+
+When you first load the app, you will be able to see a list of recipes along with the name of the person who created the recipe.
+
+Scince the user has not logged in yet, they will be unable to see any of the details of the recipes nor create any new recipes.
+
+<img src="https://i.imgur.com/v4uFKLe.png">
+
+Once the user logs in with google by clicking on the top right hand corner, they will now be shown the option to see the details of the recipes as well as click to create a new recipe.
+
+<img src="https://i.imgur.com/GdFydny.png">
+
+When you click on the "ADD RECIPE" button, you will be brought to a page to add the title and style of the recipe you to create.
+
+<img src="https://i.imgur.com/3npdf3H.png">
+
+Once you have made your new recipe page, you can click on the "DETAILS" button to vew the full recipe as well as add and delete ingredients and directions.
+
+<img src="https://i.imgur.com/byhndvJ.png">
+
+Users may return to all of the recipes by clicking the "ALL RECIPES" button.
+
+## Technologies Used
+
+* JavaScript
+* CSS
+* HTML
+* Express
+* MongoDB
+* Mongoose
+* Node
 
 
-This is your passport boilerplate.
+## Getting Started
 
-## Setup 
+To get started with creating recipes, click on this link:
+<https://happy-tights-fox.cyclic.app/recipes>
 
-1. Clone the repo
-2. Rename the folder to your Project
-3. Delete the `.git` file, when you are in the root of the file, you can press `ls` and you should see a `.git` file, then go ahead and run `rm -rf .git`
+This is the link to my Trello Planning:
+<https://trello.com/b/BPTtRDVe/recipe-book>
 
+This is the link to my wireframe: 
+<https://drive.google.com/file/d/1izztMsHoZd33hHHKz46WBezfX03cjruI/view?usp=sharing>
 
-#### Setup your git repo
-0. Setup your `.env` file and add all the things you need! (look at mongoose movies for reference!)
-1. in the project root `git init`
-2. `git add .` to add all the starter code
-3. `git commit -m "setup boilerplate"` 
-4. go to github and create your github and create a repo (Without a readme or liscense you can add that later!)
-5. copy the remote address
-6. In your terminal add the remote `git remote add origin yourGithubRepo'sAddressGoesHere`
-7. `git pull origin main` If a screen pulls up asking you to do something just press `:q` and then `enter` (thats vim btw :) )
-8. `git push origin main`
+This is the link to my ERD:
+<https://drive.google.com/file/d/1YJ-pY97EQd4pJeY0HLTqtvWJNZU-LmA5/view?usp=sharing>
 
-#### Setup your login (THE APP WON'T WORK until you do, no VIEWS are setup, or the landing route)
+## Next Steps
 
-0. Setup your database connection string
-1. Then Setup Your User Model, 
-2. Follow the steps from the lesson plan to get your Google login credentials for your `.env` file (create the file if you haven't), or you can just copy the ones from earlier if you want to reuse them.
-3. Setup the Code in your config passport 
-4. Setup your callback routes in your `routes/index`
-5. Setup a view and test your login!
+Despite this app having functionality, there can be further improvments:
 
-#### Make a commit 
-
-```git commit -m "setup up oauth and User Model"```
+* Implementing an update function for the user to tweek the directions a little
+* Add a delete funciton to the entirety of the recipe
+* Make it user friendly for phones or smaller devices
+* Make the ingredients into a checklist where you can put a line through the ingredient to show you have gotten it
+* Add more css
+* Have the user be able to add photos to their recipes
+* Create a page that will show the recipes that only the logged in user has made
