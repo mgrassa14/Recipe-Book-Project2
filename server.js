@@ -13,7 +13,7 @@ const MongoStore = require('connect-mongo');
 const indexRoutes = require('./routes/index');
 const recipesRouter = require('./routes/recipes');
 const ingredientsRouter = require('./routes/ingredients');
-
+const directionsRouter = require('./routes/directions');
 
 // create the Express app
 const app = express();
@@ -61,6 +61,7 @@ app.use('/', indexRoutes);
 app.use('/recipes', recipesRouter);
 // embedded resources
 app.use('/', ingredientsRouter);
+app.use('/', directionsRouter);
 
 // invalid request, send 404 page
 app.use(function(req, res) {

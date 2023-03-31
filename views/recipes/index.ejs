@@ -15,17 +15,14 @@
           <td><%= r.userName %></td>
           <td><%= r.title %></td>
           <td><%= r.style %></td>
-          <td><a href="/recipes/<%= r._id %>">DETAILS</a></td>
-        </tr>
+          <% if (user) { %>
+            <td><a href="/recipes/<%= r._id %>">DETAILS</a></td>
+          <% } else { %>
+          </tr>
+          <% } %>
+        
         <% }); %>
     </tbody>
 </table>
-
-<!-- <% if (user) { %>
-   <h1>All Recipes Page!</h1> 
-<% } else { %>
-    <span>Please Login in order to leave a Review</span>
-<% } %> -->
-
 
 <%- include('../partials/footer') %>
